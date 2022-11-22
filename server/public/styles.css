@@ -1,3 +1,30 @@
+body {
+  font-family:"Arial Narrow";
+}
 .app{
   background-color: #ece3d4
+}
+.navbar{
+  background:#dabdb4;
+  box-shadow:0px 1px 10px 10px #ddd;
+  height:auto;
+  text-align:center;
+  width:100%;
+}
+.navbarbullet{
+  display:inline;
+}
+
+.navlink{
+  color:#f7f4ee;
+  display:inline-block;
+  height:60px;
+  line-height:60px;
+  margin:0px;
+  padding:0px 15px;
+  text-decoration:none;
+  transition: color 0.3s ease-in;
+}
+.navlink:hover {
+  color:#605c59;
 }

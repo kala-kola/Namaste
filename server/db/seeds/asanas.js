@@ -42,6 +42,11 @@ exports.seed = function (knex) {
           name: 'Hasta Uttanasana',
           image: 'img/11HastaUttanasana.png',
         },
+        {
+          id: 12,
+          name: 'Pranamasana',
+          image: '/img/12Pranamasana.png',
+        },
       ])
     })
 }

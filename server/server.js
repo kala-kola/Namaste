@@ -4,6 +4,7 @@ const path = require('path')
 
 const fruitRoutes = require('./routes/fruits')
 const asanasRoutes = require('./routes/routes-asanas')
+const gratitudesRoutes = require('./routes/routes-gratitude')
 
 const server = express()
 
@@ -12,6 +13,7 @@ server.use(express.static(path.join(__dirname, 'public')))
 
 server.use('/api/v1/fruits', fruitRoutes)
 server.use('/api/v1/asanas', asanasRoutes)
+server.use('/api/v1/gratitudes', gratitudesRoutes)
 
 server.get('*', (req, res) => {
   res.sendFile(path.resolve('server/public/index.html'))

@@ -5,6 +5,7 @@ import Nav from './Nav'
 import { fetchFruits } from '../actions'
 import { fetchAsanas } from '../actions/actions-asanas'
 import SunSalutation from './SunSalutation'
+import Gratitudes from './Gratitudes'
 
 function App() {
   const dispatch = useDispatch()
@@ -19,6 +20,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<SunSalutation />} />
+          <Route path="/gratitudes" element={<Gratitudes />} />
         </Routes>
       </div>
     </>

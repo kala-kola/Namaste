@@ -8,22 +8,24 @@ export function getGratitudes() {
   })
 }
 
-// export function addGratitude(form) {
-//   return request
-//     .post('/api/v1/gratitudes/add')
-//     .send(form)
-//     .then((res) => {
-//       return res.body
-//     })
-// }
+export function addGratitude(form) {
+  return request
+    .post('/api/v1/gratitudes/add')
+    .send(form)
+    .then((res) => {
+      return res.body
+    })
+}
 
-// export function updateGratitude(id, form) {
-//   return request
-//     .post('/api/v1/gratitudes/update/:id')
-//     .where((id = 'id'))
-//     .update(form)
-// }
+export function updateGratitude(id, form) {
+  return request
+    .patch('/api/v1/gratitudes/update/' + id)
+    .send(form)
+    .then((res) => {
+      return res.body
+    })
+}
 
-// export function deleteGratitude(id) {
-//   return request.del('/api/v1/gratitudes/:id').where((id = 'id'))
-// }
+export function deleteGratitude(id) {
+  return request.del('/api/v1/gratitudes/' + id)
+}

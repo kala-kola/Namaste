@@ -7,6 +7,7 @@ const reducer = (state = initialState, action) => {
   switch (type) {
     case SET_GRATITUDES:
       return payload
+
     default:
       return state
   }

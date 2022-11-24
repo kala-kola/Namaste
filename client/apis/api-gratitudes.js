@@ -27,5 +27,5 @@ export function updateGratitude(id, form) {
 }
 
 export function deleteGratitude(id) {
-  return request.del('/api/v1/gratitudes/' + id)
+  return request.del('/api/v1/gratitudes/delete/' + id)
 }

@@ -1,7 +1,16 @@
-import { getGratitudes, deleteGratitude } from '../apis/api-gratitudes'
+import {
+  getGratitudes,
+  deleteGratitude,
+  addGratitude,
+  updateGratitude,
+} from '../apis/api-gratitudes'
 
 export const SET_GRATITUDES = 'SET_GRATITUDES'
+
 export const DEL_GRATITUDE = 'DEL_GRATITUDE'
+export const ADD_GRATITUDE = 'ADD_GRATITUDE'
+export const EDIT_GRATITUDE = 'EDIT_GRATITUDE'
+
 //simple
 export function setGratitudes(gratitudes) {
   return {
@@ -13,6 +22,19 @@ export function removeGratitude(id) {
   return {
     type: DEL_GRATITUDE,
     payload: id,
+  }
+}
+export function todayGratitude(newGratitude) {
+  return {
+    type: ADD_GRATITUDE,
+    payload: newGratitude,
+  }
+}
+export function changeGratitude(id, gratitudeEdit) {
+  return {
+    type: EDIT_GRATITUDE,
+    payload: id,
+    gratitudeEdit,
   }
 }
 
@@ -28,6 +50,20 @@ export function delGratitude(id) {
   return (dispatch) => {
     return deleteGratitude(id).then(() => {
       dispatch(removeGratitude(id))
+    })
+  }
+}
+export function makeGratitude(newGratitude) {
+  return (dispatch) => {
+    return addGratitude(newGratitude).then((gratitude) => {
+      dispatch(todayGratitude(gratitude))
+    })
+  }
+}
+export function edGratitude(id, gratitudeEdit) {
+  return (dispatch) => {
+    return updateGratitude(id, gratitudeEdit).then((id, gratitudeEdit) => {
+      dispatch(id, gratitudeEdit(id, gratitudeEdit))
     })
   }
 }

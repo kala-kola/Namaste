@@ -8,10 +8,10 @@ export function getGratitudes() {
   })
 }
 
-export function addGratitude(form) {
+export function addGratitude(gratitude) {
   return request
     .post('/api/v1/gratitudes/add')
-    .send(form)
+    .send({ gratitude })
     .then((res) => {
       return res.body
     })

@@ -10,11 +10,11 @@ export default function Nav() {
             Sun Salutations
           </Link>
         </li>
-        {/* <li>
-          <Link className="navlink" to="/gratitude">
-            Gratitude Attitude
+        <li className="navbarbullet">
+          <Link className="navlink" to="/gratitudes">
+            Gratitudes
           </Link>
-        </li> */}
+        </li>
       </ul>
     </nav>
   )

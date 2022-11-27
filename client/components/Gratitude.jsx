@@ -1,33 +1,46 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 
-import {
-  delGratitude,
-  makeGratitude,
-  edGratitude,
-} from '../actions/actions-gratitudes.js'
+import { delGratitude, edGratitude } from '../actions/actions-gratitudes.js'
 
 export default function Gratitude({ data }) {
-  // const [newGratitude, setNewGratitude] = useState('')
-
   const { gratitude, id } = data
+  const [updateGratitude, setUpdateGratitude] = useState(gratitude)
+  const [edit, setEdit] = useState(false)
+
   const dispatch = useDispatch()
 
   function handleDelete() {
     dispatch(delGratitude(id))
     console.log(id)
   }
+  function handleChange(event) {
+    setUpdateGratitude(event.target.value)
+  }
 
   function handleEdit() {
-    dispatch(edGratitude(data))
+    dispatch(edGratitude(id, updateGratitude))
   }
+
+  function toggleEdit() {
+    setEdit(!edit)
+    console.log(edit)
+  }
+
   return (
     <>
       <div>
-        <button onClick={handleEdit}> EDIT</button>
+        <button onClick={toggleEdit}> EDIT</button>
         <button onClick={handleDelete}> DEL</button>
-        {gratitude}
-        {/* <button onClick={handleAdd}> ADD</button> */}
+
+        {edit ? (
+          <>
+            <input onChange={handleChange} value={updateGratitude} />{' '}
+            <button onClick={handleEdit}>SUBMIT EDIT</button>
+          </>
+        ) : (
+          <span>{gratitude}</span>
+        )}
       </div>
     </>
   )

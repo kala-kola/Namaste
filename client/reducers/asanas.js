@@ -1,4 +1,4 @@
-import { SET_ASANAS } from '../actions/actions-asanas'
+import { SET_ASANAS } from '../actions'
 
 const initialState = []
 

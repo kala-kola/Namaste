@@ -1,18 +1,18 @@
-import { getFruits } from '../apis/fruits'
+import { getAsanas } from '../apis/api-asanas'
 
-export const SET_FRUITS = 'SET_FRUITS'
+export const SET_ASANAS = ' SET_ASANAS'
 //simple
-export function setFruits(fruits) {
+export function setAsanas(asanas) {
   return {
-    type: SET_FRUITS,
-    payload: fruits,
+    type: SET_ASANAS,
+    payload: asanas,
   }
 }
 //thunky
-export function fetchFruits() {
+export function fetchAsanas() {
   return (dispatch) => {
-    return getFruits().then((fruits) => {
-      dispatch(setFruits(fruits))
+    return getAsanas().then((asanas) => {
+      dispatch(setAsanas(asanas))
     })
   }
 }

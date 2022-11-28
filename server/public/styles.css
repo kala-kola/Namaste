@@ -2,7 +2,8 @@ body {
   font-family:"Arial Narrow";
 }
 .app{
-  background-color: #ece3d4
+  background-color: #ece3d4;
+  background-size: cover;
 }
 .navbar{
   background:#dabdb4;

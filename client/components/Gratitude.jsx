@@ -29,7 +29,7 @@ export default function Gratitude({ data }) {
 
   return (
     <>
-      <div>
+      <div className="app">
         <button onClick={toggleEdit}> EDIT</button>
         <button onClick={handleDelete}> DEL</button>
 

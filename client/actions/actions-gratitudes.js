@@ -6,7 +6,6 @@ import {
 } from '../apis/api-gratitudes'
 
 export const SET_GRATITUDES = 'SET_GRATITUDES'
-
 export const DEL_GRATITUDE = 'DEL_GRATITUDE'
 export const ADD_GRATITUDE = 'ADD_GRATITUDE'
 export const EDIT_GRATITUDE = 'EDIT_GRATITUDE'
@@ -30,11 +29,10 @@ export function todayGratitude(newGratitude) {
     payload: newGratitude,
   }
 }
-export function changeGratitude(id, gratitudeEdit) {
+export function changeGratitude(gratitudeEdit) {
   return {
     type: EDIT_GRATITUDE,
-    payload: id,
-    gratitudeEdit,
+    payload: gratitudeEdit,
   }
 }
 
@@ -60,10 +58,10 @@ export function makeGratitude(newGratitude) {
     })
   }
 }
-export function edGratitude(id, gratitudeEdit) {
+export function edGratitude(id, editedGratitude) {
   return (dispatch) => {
-    return updateGratitude(id, gratitudeEdit).then((id, gratitudeEdit) => {
-      dispatch(id, gratitudeEdit(id, gratitudeEdit))
+    return updateGratitude(id, editedGratitude).then((gratitude) => {
+      dispatch(changeGratitude(gratitude))
     })
   }
 }

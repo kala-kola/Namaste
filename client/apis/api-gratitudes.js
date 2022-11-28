@@ -17,10 +17,12 @@ export function addGratitude(gratitude) {
     })
 }
 
-export function updateGratitude(id, form) {
+export function updateGratitude(id, gratitude) {
+  console.log({ gratitude })
+
   return request
     .patch('/api/v1/gratitudes/update/' + id)
-    .send(form)
+    .send({ gratitude })
     .then((res) => {
       return res.body
     })

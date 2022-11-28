@@ -19,9 +19,9 @@ const reducer = (state = initialState, action) => {
     case EDIT_GRATITUDE:
       return state.map((gratitude) => {
         if (gratitude.id == payload.id) {
-          return gratitude
-        } else {
           return payload
+        } else {
+          return gratitude
         }
       })
     default:

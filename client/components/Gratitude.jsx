@@ -12,19 +12,19 @@ export default function Gratitude({ data }) {
 
   function handleDelete() {
     dispatch(delGratitude(id))
-    console.log(id)
   }
+
   function handleChange(event) {
     setUpdateGratitude(event.target.value)
   }
 
   function handleEdit() {
     dispatch(edGratitude(id, updateGratitude))
+    setEdit(false)
   }
 
   function toggleEdit() {
     setEdit(!edit)
-    console.log(edit)
   }
 
   return (

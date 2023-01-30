@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { delGratitude, edGratitude } from '../actions/actions-gratitudes.js'
 
 export default function Gratitude({ data }) {
-  const { gratitude, id } = data
+  const { gratitude, id, date } = data
   const [updateGratitude, setUpdateGratitude] = useState(gratitude)
   const [edit, setEdit] = useState(false)
 
@@ -30,6 +30,7 @@ export default function Gratitude({ data }) {
   return (
     <>
       <div className="app">
+        <span>{new Date(date).toLocaleDateString()}</span>
         <button onClick={toggleEdit}> EDIT</button>
         <button onClick={handleDelete}> DEL</button>
 

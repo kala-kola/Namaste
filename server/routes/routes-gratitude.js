@@ -16,7 +16,11 @@ router.get('/', (req, res) => {
 })
 
 router.post('/add', (req, res) => {
-  db.addGratitudes(req.body)
+  const newGratitude = {
+    ...req.body,
+    date: new Date(Date.now()),
+  }
+  db.addGratitudes(newGratitude)
     .then((gratitude) => {
       res.json(gratitude)
     })

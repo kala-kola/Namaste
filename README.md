@@ -6,10 +6,10 @@
 
 This repo includes:
 
-* a single, simple API endpoint (`/api/v1/fruits`)
+* a single, simple API endpoint (`/api/v1/asanas`)
 * a single React component (`<App />`)
-* an example database module (`server/db/fruits.js`)
-* an API client module (`client/apis/fruits.js`)
+* an example database module (`server/db/asanas.js`)
+* an API client module (`client/apis/asanas.js`)
 * configuration for Jest and testing library
 * configuration for server-side debugging in VS Code
 * a single client-side test (`client/components/App.test.js`)

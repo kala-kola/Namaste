@@ -9,12 +9,20 @@ export default function SunSalutation() {
     <div className="sun-gallery-wrapper">
       <div className="sun-container">
         <div className="sun-row">
-          <div className="sunSalutation">
-            {asanas.map((asana) => (
-              <div className="slider-wrapper" key={asana.id}>
-                <img src={asana.image} alt={asana.name} className="sun" />
-              </div>
-            ))}
+          <div className="sun-col">
+            <div className="sun-slider-wrapper">
+              {asanas.map((asana, idx) => (
+                <div className="sun" key={asana.id}>
+                  <img
+                    src={asana.image}
+                    alt={asana.name}
+                    style={{
+                      transform: `rotateY(calc(${idx}*30deg)) translateZ(400px)`,
+                    }}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

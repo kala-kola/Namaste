@@ -38,8 +38,8 @@ body {
 
 .sun-slider-wrapper{
   position: relative;
-  width: 230px;
-  height: 230px;
+  width: 200px;
+  height: 200px;
   transform-style: preserve-3d;
   animation: rotate 120s linear infinite;
 }

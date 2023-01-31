@@ -23,9 +23,10 @@ See the instructions [here](https://docs.github.com/en/free-pro-team@latest/gith
 #### **From the command line**
 
 ```
-git clone https://github.com/dev-academy-challenges/boilerplate-fullstack [your-project-name]
-cd [your-project-name]
+git clone https://github.com/kala-kola/Namaste.git
 npm install # to install dependencies
+npm run knex migrate:latest # to install db
+npm run knex seed:run
 npm run dev # to start the dev server
 ```
 

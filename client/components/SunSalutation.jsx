@@ -12,7 +12,7 @@ export default function SunSalutation() {
           <div className="sunSalutation">
             {asanas.map((asana) => (
               <div className="slider-wrapper" key={asana.id}>
-                <img src={asana.image} alt={asana.name} />
+                <img src={asana.image} alt={asana.name} className="sun" />
               </div>
             ))}
           </div>

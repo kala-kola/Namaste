@@ -72,7 +72,7 @@ body {
   }
 }
 
-.slider-wrapper > key{
+.sun{
   display: inline-block;
   position: absolute;
   top: 0;
@@ -82,7 +82,7 @@ body {
   transform-origin: center;
   transform-style: preserve-3d;
   /* transform: rotateY(calc(12)*30deg) translateZ(350px); */
-  transform: rotateY(calc(var(--i)*30deg)) translateZ(350px);
+  transform: rotateY(90deg) translateZ(350px);
 }
 
 .slider-wrapper img{
@@ -98,4 +98,10 @@ body {
 
 .slider-wrapper:hover img{
   transform: translateY(-50px) scale(1.2);
+}
+#gratitude{
+  height: 200px;
+  width: 200px;
+  display: flex;
+  
 }

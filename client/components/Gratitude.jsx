@@ -40,7 +40,7 @@ export default function Gratitude({ data }) {
             <button onClick={handleEdit}>SUBMIT EDIT</button>
           </>
         ) : (
-          <span>{gratitude}</span>
+          <span id="gratitude">{gratitude}</span>
         )}
       </div>
     </>

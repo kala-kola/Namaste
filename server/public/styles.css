@@ -8,8 +8,6 @@ body {
 .app{
   background-color: #ece3d4;
   background-size: cover;
-  width: 100%;
-  height: auto;
 }
 
 
@@ -100,8 +98,28 @@ body {
   transform: translateY(-50px) scale(1.2);
 }
 #gratitude{
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 180px;
   display: flex;
-  
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin:20px 20px 0px 20px;
+  padding: 15px;
+  background-color: #f7f4ee;
+  border-radius: 25px;
+
+}
+.grat{
+  background-color: #dabdb4;
+  border-radius: 25px;
+  display: inline-block;
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+}
+.buttons{
+  margin: 0;
+  padding: 0;
+
 }

@@ -26,11 +26,6 @@ export default function Gratitudes() {
   return (
     <div className="gratitude">
       <h1>Gratitude Journal</h1>
-
-      {gratitudes.map((gratitude) => (
-        <Gratitude key={gratitude.id} data={gratitude} />
-      ))}
-
       <label htmlFor="new_gratitude">What are you grateful for today? </label>
       <input
         value={newGratitude}
@@ -42,6 +37,10 @@ export default function Gratitudes() {
       <button onClick={handleSubmit}>ADD GRATITUDE</button>
 
       <div></div>
+
+      {gratitudes.map((gratitude) => (
+        <Gratitude key={gratitude.id} data={gratitude} />
+      ))}
     </div>
   )
 }

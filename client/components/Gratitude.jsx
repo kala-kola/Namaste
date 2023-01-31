@@ -30,18 +30,20 @@ export default function Gratitude({ data }) {
   return (
     <>
       <div className="app">
-        <span>{new Date(date).toLocaleDateString()}</span>
-        <button onClick={toggleEdit}> EDIT</button>
-        <button onClick={handleDelete}> DEL</button>
+        <div className="grat">
+          {edit ? (
+            <>
+              <input onChange={handleChange} value={updateGratitude} />{' '}
+              <button onClick={handleEdit}>SUBMIT EDIT</button>
+            </>
+          ) : (
+            <span id="gratitude">{gratitude}</span>
+          )}
 
-        {edit ? (
-          <>
-            <input onChange={handleChange} value={updateGratitude} />{' '}
-            <button onClick={handleEdit}>SUBMIT EDIT</button>
-          </>
-        ) : (
-          <span id="gratitude">{gratitude}</span>
-        )}
+          <span>{new Date(date).toLocaleDateString()}</span>
+          <button onClick={toggleEdit}> EDIT</button>
+          <button onClick={handleDelete}> DEL</button>
+        </div>
       </div>
     </>
   )
